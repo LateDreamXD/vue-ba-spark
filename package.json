@@ -1,0 +1,63 @@
+{
+  "name": "vue-ba-spark",
+  "version": "0.1.0",
+  "description": "Blue Archive Style Particle Effect port to vue3",
+  "keywords": [
+    "BlueArchive",
+    "mouse",
+    "click",
+    "trail",
+    "particle",
+    "effect",
+    "vue"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/LateDreamXD/vue-ba-spark#readme",
+  "bugs": {
+    "url": "https://github.com/LateDreamXD/vue-ba-spark/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LateDreamXD/vue-ba-spark.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "LateDreamXD",
+    "email": "xiaozhisans@qq.com",
+    "url": "https://github.com/LateDreamXD"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "tsdown": "^0.21.9",
+    "typescript": "^5.9.3",
+    "unplugin-vue": "^7.1.1",
+    "vite": "^8.0.8",
+    "vue": "^3.5.32",
+    "vue-tsc": "^3.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "*",
+    "vue": "~3"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
