@@ -14,19 +14,20 @@
 ```js
 import { createApp } from 'vue';
 import App from './App.vue';
-import BaSpark from 'vue-ba-spark';
+import BASpark from 'vue-ba-spark';
 
 const app = createApp(App);
-app.component('ba-spark', BaSpark);
+app.component('BASpark', BASpark);
+app.mount('#app');
 ```
 
 ### 组件中导入
 ```html
 <script setup>
-import BaSpark from 'vue-ba-spark';
+import BASpark from 'vue-ba-spark';
 </script>
 <template>
-  <BaSpark />
+  <BASpark />
 </template>
 ```
 
@@ -36,7 +37,7 @@ import BaSpark from 'vue-ba-spark';
 <BASpark title="VUE-BASPARK" style="border: 1px solid deepskyblue;" />
 ```
   
-
+  
 
 你也可以传递 `opts` 属性给 `BASpark` 组件来自定义效果。
 | 选项 | 类型 | 默认值 | 描述 |

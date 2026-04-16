@@ -14,10 +14,11 @@ Blue Archive Style Particle Effect port to vue3 from [DoomVoss/BASpark](https://
 ```js
 import { createApp } from 'vue';
 import App from './App.vue';
-import BaSpark from 'vue-ba-spark';
+import BASpark from 'vue-ba-spark';
 
 const app = createApp(App);
-app.component('ba-spark', BaSpark);
+app.component('BASpark', BASpark);
+app.mount('#app');
 ```
 
 ### Import in Component
@@ -26,7 +27,7 @@ app.component('ba-spark', BaSpark);
 import BASpark from 'vue-ba-spark';
 </script>
 <template>
-  <BaSpark />
+  <BASpark />
 </template>
 ```
 
@@ -36,7 +37,7 @@ You can pass any attribute that can be passed to `canvas` to the `BASpark` compo
 <BASpark title="VUE-BASPARK" style="border: 1px solid deepskyblue;" />
 ```
   
-
+  
 
 You can also pass the `opts` attribute to the `BASpark` component to customize the effect.
 | Option | Type | Default | Description |
