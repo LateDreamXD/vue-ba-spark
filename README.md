@@ -42,7 +42,7 @@ import BASpark from 'vue-ba-spark';
 你也可以传递 `opts` 属性给 `BASpark` 组件来自定义效果。
 | 选项 | 类型 | 默认值 | 描述 |
 | --- | --- | --- | --- |
-| `color` | `string` | `45,175,255` | 效果（点击特效和鼠标轨迹）的颜色，格式为`r,g,b` |
+| `color` | `string` | `45,175,255` | 效果（点击特效和鼠标轨迹）的主要颜色，格式为`r,g,b` |
 | `scale` | `number` | `1` | 效果的缩放比例 |
 | `opacity` | `number` | `1` | 效果的透明度 |
 | `speed` | `number` | `1` | 动画速度 |

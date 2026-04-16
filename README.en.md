@@ -42,7 +42,7 @@ You can pass any attribute that can be passed to `canvas` to the `BASpark` compo
 You can also pass the `opts` attribute to the `BASpark` component to customize the effect.
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `color` | `string` | `45,175,255` | primary color, format: `r,g,b` |
+| `color` | `string` | `45,175,255` | primary color of the effect (click effect and trail), format: `r,g,b` |
 | `scale` | `number` | `1` | scale of the effect |
 | `opacity` | `number` | `1` | opacity of the effect |
 | `speed` | `number` | `1` | animation speed |

@@ -1,6 +1,6 @@
 type Options = {
 	/**
-	 * primary color of the effect, format: `r,g,b`
+	 * primary color of the effect (click effect and trail), format: `r,g,b`
 	 * @default '45,175,255'
 	 */
 	color?: string;
@@ -20,17 +20,17 @@ type Options = {
 	 */
 	speed?: number;
 	/**
-	 * maximum triangles of the trail
+	 * maximum number of triangles on the trail
 	 * @default 16
 	 */
 	maxTrail?: number;
 	/**
-	 * always show the trail even when the mouse is not pressed
+	 * show trail even when mouse is not pressed
 	 * @default false
 	 */
 	alwaysTrail?: boolean;
 	/**
-	 * show the FPS counter
+	 * show FPS counter
 	 * @default false
 	 */
 	showFPS?: boolean;
