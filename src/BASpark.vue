@@ -4,6 +4,7 @@ import { Options, Pos, Wave, Spark, Trail } from './types';
 
 interface Props extends /** @vue-ignore */ CanvasHTMLAttributes {
 	opts?: Options
+	style?: Record<string, any>;
 }
 
 const props = defineProps<Props>();
@@ -290,5 +291,5 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<canvas class="ba-spark" :style="{ ...(style as any), pointerEvents: 'none', position: 'fixed', left: 0, top: 0, zIndex: 100000 }" ref="canvas" />
+	<canvas class="ba-spark" :style="{ ...style, pointerEvents: 'none', position: 'fixed', left: 0, top: 0, zIndex: 100000 }" ref="canvas" />
 </template>
