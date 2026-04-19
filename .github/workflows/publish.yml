@@ -1,0 +1,55 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: generate changelog
+        id: gen_changelog
+        env:
+          filename: 'CHANGELOG.md'
+        run: |
+          echo "## What's changed:" >> ${{ env.filename }}
+          git log --pretty=format:'- %s by @%an' --grep '^(. )?(fix|feat|perf|sync)(\(.+\))?:' -E $(git describe --tags --abbrev=0 ${{ github.ref_name }}^)..${{ github.ref_name }} >> ${{ env.filename }}
+          echo -e '\n\n[**Full Changes**](https://github.com/${{ github.repository }}/compare/'$(git describe --tags --abbrev=0 ${{ github.ref_name }}^)'...${{ github.ref_name }})' >> ${{ env.filename }}
+          echo '✔️ Changelog generated.'
+      - name: release
+        uses: ncipollo/release-action@v1
+        with:
+          prerelease: ${{ contains(github.ref_name, 'pre') }}
+          name: v${{ github.ref_name }}
+          bodyFile: 'CHANGELOG.md'
+
+  publish:
+    permissions:
+      id-token: write  # Required for OIDC
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+          node-version: 22
+      # Ensure npm 11.5.1 or later is installed
+      - name: Update npm
+        run: npm install -g npm@latest
+      - name: install deps
+        run: pnpm install --frozen-lockfile
+      - name: build
+        run: pnpm run build
+      - name: publish
+        # https://github.com/pnpm/pnpm/issues/5894
+        run: pnpm publish --no-git-checks

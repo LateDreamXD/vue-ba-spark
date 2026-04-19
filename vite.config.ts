@@ -3,4 +3,7 @@ import vue from 'unplugin-vue/vite';
 
 export default defineConfig({
 	plugins: [vue()],
+	build: {
+		outDir: 'page'
+	}
 });
