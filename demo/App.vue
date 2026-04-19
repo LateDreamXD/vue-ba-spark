@@ -53,7 +53,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<main>
+	<main class="markdown-body">
 		<img class="background" src="https://assets.latedream.qzz.io/images/background.webp" alt="" draggable="false" />
 		<div class="contorl-panel">
 			<label class="contorl-item">
@@ -64,6 +64,47 @@ onMounted(() => {
 				<span>{{ id }}</span>
 				<input v-model="opts[id]" :type="item.type" :min="item?.min" :max="item?.max" :step="item?.step" />
 			</label>
+			<details>
+				<summary>options</summary>
+				<table>
+					<thead>
+						<tr>
+							<th>option</th>
+							<th>description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>color</td>
+							<td>primary color of the effect (click effect and trail)</td>
+						</tr>
+						<tr>
+							<td>scale</td>
+							<td>scale of the effect</td>
+						</tr>
+						<tr>
+							<td>opacity</td>
+							<td>opacity of the effect</td>
+						</tr>
+						<tr>
+							<td>speed</td>
+							<td>animation speed</td>
+						</tr>
+						<tr>
+							<td>maxTrail</td>
+							<td>maximum number of triangles on the trail</td>
+						</tr>
+						<tr>
+							<td>alwaysTrail</td>
+							<td>show trail even when mouse is not pressed</td>
+						</tr>
+						<tr>
+							<td>showFPS</td>
+							<td>show FPS counter</td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
 		</div>
 		<BASpark :key="updateKey" :opts="opts" />
 	</main>
@@ -84,6 +125,7 @@ body {
 	object-fit: cover;
 	z-index: -1;
 	filter: blur(10px) brightness(0.5);
+	pointer-events: none;
 	user-select: none;
 }
 
