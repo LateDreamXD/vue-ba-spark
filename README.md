@@ -46,7 +46,7 @@ import BASpark from 'vue-ba-spark';
 | `scale` | `number` | `1` | 效果的缩放比例 |
 | `opacity` | `number` | `1` | 效果的透明度 |
 | `speed` | `number` | `1` | 动画速度 |
-| `maxTrail` | `number` | `16` | 轨迹上三角形的最大数量 |
+| `maxTrail` | `number` | `16` | 最大轨迹长度 |
 | `alwaysTrail` | `boolean` | `false` | 在鼠标未按下时也显示轨迹 |
 | `showFPS` | `boolean` | `false` | 显示帧率 |
 

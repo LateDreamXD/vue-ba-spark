@@ -46,7 +46,7 @@ You can also pass the `opts` attribute to the `BASpark` component to customize t
 | `scale` | `number` | `1` | scale of the effect |
 | `opacity` | `number` | `1` | opacity of the effect |
 | `speed` | `number` | `1` | animation speed |
-| `maxTrail` | `number` | `16` | maximum number of triangles on the trail |
+| `maxTrail` | `number` | `16` | maximum trail length |
 | `alwaysTrail` | `boolean` | `false` | show trail even when mouse is not pressed |
 | `showFPS` | `boolean` | `false` | show FPS counter |
 

@@ -20,7 +20,7 @@ type Options = {
 	 */
 	speed?: number;
 	/**
-	 * maximum number of triangles on the trail
+	 * maximum trail length
 	 * @default 16
 	 */
 	maxTrail?: number;
