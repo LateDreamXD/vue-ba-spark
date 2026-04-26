@@ -92,7 +92,7 @@ onMounted(() => {
 						</tr>
 						<tr>
 							<td>maxTrail</td>
-							<td>maximum number of triangles on the trail</td>
+							<td>maximum trail length</td>
 						</tr>
 						<tr>
 							<td>alwaysTrail</td>
