@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: ['page']
 
 permissions:
   contents: read
@@ -29,7 +29,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          cache: pnpm-page
           node-version: 22
       - name: setup pages
         uses: actions/configure-pages@v5
