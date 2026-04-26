@@ -18,10 +18,7 @@
   "bugs": {
     "url": "https://github.com/LateDreamXD/vue-ba-spark/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LateDreamXD/vue-ba-spark.git"
-  },
+  "repository": "github:LateDreamXD/vue-ba-spark",
   "license": "MIT",
   "author": {
     "name": "LateDreamXD",
@@ -47,7 +44,6 @@
     "tsdown": "^0.21.9",
     "typescript": "^5.9.3",
     "unplugin-vue": "^7.1.1",
-    "vite": "^8.0.8",
     "vue": "^3.5.32",
     "vue-tsc": "^3.2.6"
   },
